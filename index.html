@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alien Invasion Math Game</title>
+  <link href="css/style.css" rel="stylesheet">
+  <!-- <link href="css/index.css" rel="stylesheet"> -->
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <audio id="bkg" loop autoplay>
+    <source src="assets/audio/bkg_audio.wav" type="audio/wav"/>
+  </audio>
+
+  <div id="container-menu" class="container">
+    <div id="title">
+      <h1>Alien Invasion</h1>
+      <h2>Math Game</h2>
+    </div>
+    <div id="div-menu-default" class="div-menu">
+      <div class="div-btn-main">
+        <a id="btn-start" class="clickable btn-nav">Start Game</a>
+        <a id="btn-rules" class="clickable btn-nav">Game Rules</a>
+      </div>
+      <a id="btn-sound" class="clickable btn-sound">
+        <img id="img-menu-sound" class="img-menu" src="assets/icons/icon_sound.png">
+      </a>
+    </div>
+    <div id="div-menu-rules" class="div-menu" hidden>
+      <a id="btn-back" class="clickable btn-nav">
+        <img class="img-back" src="assets/icons/icon_back.png">
+      </a>
+      <p>
+        Use the arrow keys to move your cannon. To fire at the spaceships, press SPACEBAR to shoot at the spaceship. <br>
+        When you shoot the correct spaceship with your cannon, you will earn a hit score of 1.<br>
+        When you shoot an incorrect spaceship with your cannon, your miss score will increase.<br>
+        When the timer runs out or when any of the spaceship touches the platform or the cannon, the game is over.
+      </p>
+    </div>
+    <div id="div-menu-game" class="div-menu" hidden>
+      <a id="btn-back-step" class="clickable btn-nav">
+        <img class="img-back" src="assets/icons/icon_back.png">
+      </a>
+      <input id="game-step-1" class="game-step" type="text" name="name" placeholder="Enter your name" >
+      <div id="game-step-2" class="game-step" hidden>
+        <h3>Select Difficulty</h3>
+        <form action="">
+          <input type="radio" id="easy" name="difficulty" value="easy" checked>Easy<br>
+          <input type="radio" id="hard" name="difficulty" value="hard">Hard<br>
+        </form>
+      </div>
+      <a id="btn-next" class="clickable btn-nav">Next</a>
+    </div>
+  </div>
+  <div id="container-game" class="container">
+    <div id="container-game-elements">
+      <div class="div-spaceship">
+        <span class="question">1 + 1</span>
+      </div>
+      <div class="div-spaceship">
+        <span class="question">2 + 2</span>
+      </div>
+      <div class="div-spaceship">
+        <span class="question">3 + 4</span>
+      </div>
+      <div class="div-spaceship">
+        <span class="question">6 + 10</span>
+      </div>
+      <div class="div-spaceship">
+        <span class="question">30 - 20</span>
+      </div>
+      <div id="cannon">
+        <span id="answer">88</span>
+      </div>
+    </div>
+    <div id="cannon-pad"></div>
+    <div id="container-game-hud">
+      <div id="timer">
+        Timer: <span id="timer-text">90</span>
+      </div>
+      <div id="counter-hit">
+        Hit: <span id="hit-text">10</span>
+      </div>
+      <div id="counter-miss">
+        Miss: <span id="miss-text">20</span>
+      </div>
+      <a id="btn-hud-sound" class="clickable btn-sound">
+        <img src="assets/icons/icon_sound.png">
+      </a>
+      <a id="btn-hud-save" class="clickable">
+        <img src="assets/icons/icon_save.png">
+      </a>
+    </div>
+    <div id="game-over-dialog" hidden>
+      <h2>Game Over</h2>
+      <p>
+        Player: <span id="sum-player-name">Jon Snow</span>
+      </p>
+      <p>
+        Difficulty: <span id="sum-difficulty">Easy</span>
+      </p>
+      <p>
+        Hit count: <span id="sum-hit-count">300</span>
+      </p>
+      <p>
+        Miss count: <span id="sum-miss-count">0</span>
+      </p>
+      <h3>Play Again?</h3>
+      <a id="btn-restart" class="clickable btn-nav">Play Again</a>
+      <a id="btn-menu" class="clickable btn-nav">Menu</a>
+    </div>
+  </div>
+</body>
+
+</html>

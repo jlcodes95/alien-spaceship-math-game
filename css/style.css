@@ -1,0 +1,273 @@
+/*
+  CSS reset
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  height: 800px;
+  width: 800px;
+  background-image: url('../assets/img/img_background.jpg');
+  background-size: cover;
+}
+
+#container-menu {
+  display: block;
+}
+
+/* menu styling */
+
+h1 {
+  padding-top: 20px;
+  color: white;
+}
+
+h2 {
+  padding-bottom: 10px;
+  color: white;
+}
+
+.div-btn-main {
+  width: 100%;
+  position: relative;
+  top: 100px;
+  display: grid;
+  justify-content: center;
+}
+
+.btn-nav {
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.div-menu {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.game-step {
+  position: absolute;
+  margin-top: 30px;
+  left: 33%;
+  width: 33%;
+}
+
+#game-step-1 {
+  width: 33%;
+  height: 50px;
+  font-size: 1.5em;
+}
+
+#game-step-2 {
+  color: white;
+}
+
+#div-menu-rules {
+  position: relative;
+}
+
+#div-menu-rules > p {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  margin-top: 70px;
+  font-size: 1.5em;
+  color: white;
+}
+
+#div-menu-game {
+  position: relative;
+  height: 200px;
+}
+
+#btn-sound {
+  position: absolute;
+  right: 20px;
+  top: 600px;
+}
+
+#btn-game-next {
+  position: absolute;
+  bottom: 30px;
+  left: 33%;
+  height: 30px;
+  margin: auto;
+  width: 33%;
+
+}
+
+#btn-back, #btn-back-step {
+  left: 30px;
+  position: absolute;
+  width: 70px;
+  height: 50px;
+}
+
+#btn-next {
+  position: relative;
+  top: 100px;
+  padding: 10px 30px;
+}
+
+.img-back {
+  width: 30px;
+  height:30px;
+}
+
+.img-menu {
+  width: 40px;
+  height: 40px;
+  padding: 5px 5px;
+}
+
+.clickable {
+  background-color: #AAAAAA;
+  border-radius: 10px;
+}
+
+/* game styling */
+#container-game {
+  width: 800px;
+  height: 800px;
+  display: none;
+  margin: 0 auto;
+  grid-template-rows: auto 20px 60px;
+  justify-items: center;
+}
+
+#container-game-elements {
+  width: 800px;
+  height: 720px;
+  display: none;
+  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 120px;
+  column-gap: 20px;
+  justify-items: center;
+  /* align-content: center; */
+}
+
+#container-game-hud {
+  width: 800px;
+  height: 60px;
+  display: none;
+  grid-template-columns: repeat(3, 4fr) repeat(2, 1fr);
+  grid-template-rows: 60px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.div-spaceship {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  background-image: url('../assets/img/img_ufo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.question {
+  width: 75%;
+  height: 24%;
+  left: 13%;
+  top: 47%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+}
+
+#cannon {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    background-image: url('../assets/img/img_cannon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-self: center;
+    align-self: end;
+}
+
+#cannon-pad {
+  background: rgb(59, 132, 172);
+  border-color: black;
+  border-style: solid;
+  width: 100%;
+  height: 20px;
+}
+
+#answer {
+  width: 40%;
+  height: 26%;
+  left: 30%;
+  top: 74%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+}
+
+/* hud */
+#container-game-hud > * {
+  margin: 15px auto;
+}
+
+#container-game-hud > a > img {
+  padding: 5px 5px;
+  height: 30px;
+}
+
+#container-game-hud > a {
+  width: 40px;
+  height: 30px;
+}
+
+.clickable:hover {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+/* game over dialog */
+#game-over-dialog {
+  background-color: rgb(44, 26, 77);
+  border: solid 2px #FFFFFF;
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  margin: 0 auto;
+  top: 250px;
+  left: 0px;
+  right: 0px;
+}
+
+#game-over-dialog h2 {
+  padding-top: 20px;
+}
+
+#game-over-dialog p, #game-over-dialog h3 {
+  color: #FFFFFF;
+}
+
+#game-over-dialog h3 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#game-over-dialog a {
+  margin: auto 10px;
+  padding: 10px 10px;
+  color: rgb(44, 26, 77);
+}
