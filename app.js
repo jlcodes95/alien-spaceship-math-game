@@ -11,7 +11,7 @@ const MAX_MARGIN_PLATFORM = 610
 const DEFAULT_TIME = 90
 
 let currentGameStep = 0
-let soundOn = true
+let soundOn = false
 let currentGame = null
 let name
 let difficulty
